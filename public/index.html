@@ -6,40 +6,56 @@
     <title>Angular Score Board</title>
     <link rel="stylesheet" href="./screen.css">
   </head>
-  <body>
+  <body ng-app="scoreBoard" ng-controller="mainController">
 
     <header> <h1> My Score Board </h1> </header>
 
     <div class="flex">
 
-      
+
         <section class="team-one">
-          <h4> Team 1 </h4>
-          <h1>0</h1>
+
+          <h4> Team One name is  </h4>
+          <h2>{{currentNameOne}}</h2>
+          
+          <h1 ng-model="number"> {{currentScoreOne}} </h1>
+
           <h4>Update Team 1 Name</h4>
-          <input placeholder="Update name...">
-          <button>Update</button>
+          <input type="text" name="" id="" ng-model="name">
+          <button ng-click="updateName()">Update</button>
 
           <h4>Update Team 1 Score</h4>
-          <button >Add 1</button>
-          <button>Subtract 1</button>
+
+          <button ng-click="addOne()">Add 1</button>
+
+          <button ng-click="subOne()">Subtract 1</button>
+
         </section>
 
-        <section class ="team-two">
-          <h4>Team 2</h4>
-          <h1>0</h1>
-          <h4> Update Team 2 Name </h4>
-          <input placeholder="Update name...">
-          <button>Update</button>
+        <section class="team-two">
 
-          <h4>Update Team 2 Score </h4>
-          <button>Add 1</button>
-          <button> Subtract 1</button>
-        </section>
+            <h4> Team Two name is  </h4>
+            <h2>{{currentNameTwo}}</h2>
+            
+            <h1 ng-model="number"> {{currentScoreTwo}} </h1>
+  
+            <h4>Update Team 2 Name</h4>
+            <input type="text" name="" id="" ng-model="name2">
+            <button ng-click="updateName2()">Update</button>
+  
+            <h4>Update Team 2 Score</h4>
+  
+            <button ng-click="addOne2()">Add 1</button>
+  
+            <button ng-click="subOne2()">Subtract 1</button>
+  
+          </section>
+
+
 
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="./main.js" charset="utf-8"></script>
   </body>
 </html>
